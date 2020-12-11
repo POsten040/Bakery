@@ -24,10 +24,10 @@ namespace Items.Tests
     [TestMethod]
     public void BreadOrder_CalculatesPriceOfBreadOrder_Int()
     {
-      int input = 2;
+      int input = 1;
       Bread uOrder = new Bread(input);
       int result = uOrder.BreadOrder();
-      Assert.AreEqual(10, result);
+      Assert.AreEqual(5, result);
     }
     [TestMethod]
     public void BreadOrder_CalculatesSalePriceOfBreadOrder_Int()
