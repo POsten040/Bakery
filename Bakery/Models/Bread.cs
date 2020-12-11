@@ -4,7 +4,7 @@ namespace Item
 {
   public class Bread
   {
-    private int Cost { get; set; }
+    public int Cost { get; set; }
     public int Order { get; set; }
     public Bread(int order)
     {
@@ -12,10 +12,10 @@ namespace Item
     }
     public int BreadOrder()
     {
-      this.Order = this.Cost;
+      this.Cost = this.Order;
       int total = 5 * this.Cost;
       if (this.Order > 1) {
-        int discount = ((this.Order/2) * 5) - total;
+        int discount = Math.Abs(((this.Order/2) * 5) - total);
         return discount;
       } 
       else
