@@ -58,9 +58,13 @@ Requirements:
     <td>5 bread please</td>
     <td>cost = $15, order includes 5 loaves</td>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Return price of Pastry</td>
+    <td>input = 1</td>
+    <td>cost = 2</td>
+  <tr>
+    <td>Return Sale price of Pastry</td>
+    <td>input = 3</td>
+    <td>cost = 5</td>
 </table>
 </details>
 

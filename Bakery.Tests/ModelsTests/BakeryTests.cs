@@ -45,6 +45,14 @@ namespace Items.Tests
       int result = uOrder.PastryOrder();
       Assert.AreEqual(2, result);
     }
+    [TestMethod]
+    public void PastryOrder_CalculateSalePriceOfPastry_Int()
+    {
+      int input = 3;
+      Pastry uOrder = new Pastry(input);
+      int result = uOrder.PastryOrder();
+      Assert.AreEqual(5, result);
+    }
   }
 }
       
