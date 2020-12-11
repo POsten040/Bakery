@@ -8,15 +8,15 @@ namespace Bakery
   {
     public static void Main()
     {
-      Console.WriteLine("Welcome to bakery, Would you like Bread or Pastry?");
+      Console.WriteLine("Welcome to bakery, Would you like Bread or Pastry?(bread/pastry)");
       string input = Console.ReadLine();
+      Console.WriteLine($"How much {input} do you need?");
+      int quantity = int.Parse(Console.ReadLine());
       if (input == "bread")
       {
-        Console.WriteLine("How much Bread do you need?");
-        int bread = int.Parse(Console.ReadLine());
-        Bread uOrder = new Bread(bread);
+        Bread uOrder = new Bread(quantity);
         Console.WriteLine($"Your {uOrder.Order} Loaves of bread will cost ${uOrder.BreadOrder()}");
-        Console.WriteLine("Would you like to add to your order, y/n?");
+        Console.WriteLine("Would you like to add to your order? (y/n)");
         string x = Console.ReadLine();
         if (x == "y")
         {
@@ -24,9 +24,7 @@ namespace Bakery
         }
         else if (x == "n")
         {
-          int finalOrder = Bread.GetAll();
-          Console.WriteLine($"You bought {finalOrder} Loaves for ${Bread.BreadOrder(finalOrder)}");
-          Console.WriteLine("Bye!");
+          Program.PrintOrder();
         }
         else 
         {
@@ -35,15 +33,31 @@ namespace Bakery
       }
       else if (input == "pastry")
       {
-        Console.WriteLine("How many Pastries do you need?");
-        int pastry = int.Parse(Console.ReadLine());
-        Pastry uOrder = new Pastry(pastry);
+        Pastry uOrder = new Pastry(quantity);
         Console.WriteLine($"Your {uOrder.Order} Pastries will cost ${uOrder.PastryOrder()}");
+        Console.WriteLine("Would you like to add to your order, y/n?");
+        string x = Console.ReadLine();
+        if (x == "y")
+        {
+          Main();
+        }
+        else if (x == "n")
+        {
+          Program.PrintOrder();
+        }
+        else 
+        {
+          Console.WriteLine("Not a valid selection");
+        }
       }
-      else 
-      {
-        Console.WriteLine("Not a valid selection");
-      }
+    }
+    public static void PrintOrder()
+    {
+      int finalBread = Bread.GetAll();
+      int finalPastry = Pastry.GetAll();
+      double cost = Bread.BreadOrder(finalBread) + Pastry.PastryOrder(finalPastry);
+      Console.WriteLine($"You bought {finalBread} Loaves of bread and {finalPastry} pastries for ${cost}");
+      Console.WriteLine("Bye!");
     }
   }
 }

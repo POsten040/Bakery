@@ -40,7 +40,7 @@ namespace Item
       double d = (double)total;
       double cost = 5 * (total/3);
       double reg = 2 * (total%3);
-      return cost ;
+      return cost + reg;
     }
   }
 }
