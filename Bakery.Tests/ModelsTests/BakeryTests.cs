@@ -74,6 +74,15 @@ namespace Items.Tests
       int final = Bread.BreadOrder(total);
       Assert.AreEqual(20, final);
     }
+    [TestMethod]
+    public void PastryOrder_CalculateTotalCostOfPastryOrders_Int()
+    {
+      Pastry uOrder = new Pastry(5);
+      Pastry yOrder = new Pastry(2);
+      int total = Pastry.GetAll();
+      int final = Pastry.PastryOrder(total);
+      Assert.AreEqual(20, final);
+    }
   }
 }
       
