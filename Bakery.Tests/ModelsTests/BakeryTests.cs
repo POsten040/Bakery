@@ -14,6 +14,21 @@ namespace Items.Tests
       Bread uOrder = new Bread(input);
       Assert.AreEqual(typeof(Bread), uOrder.GetType());
     }
+    [TestMethod]
+    public void MakePastry_CreatesPastryObject_True()
+    {
+      int input = 5;
+      Pastry uOrder = new Pastry(input);
+      Assert.AreEqual(typeof(Pastry), uOrder.GetType());
+    }
+    [TestMethod]
+    public void BreadOrder_CalculatesPriceOfBreadOrder_Int()
+    {
+      int input = 2;
+      Bread uOrder = new Bread(input);
+      int result = uOrder.BreadOrder();
+      Assert.AreEqual(10, result);
+    }
   }
 }
       
