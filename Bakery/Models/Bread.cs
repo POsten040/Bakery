@@ -9,5 +9,10 @@ namespace Item
     {
       Order = order;
     }
+    public int BreadOrder()
+    {
+      Console.WriteLine(this.Order);
+      return 5 * this.Order;
+    }
   }
 }
