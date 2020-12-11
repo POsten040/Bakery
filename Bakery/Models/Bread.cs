@@ -5,17 +5,21 @@ namespace Item
 {
   public class Bread
   {
-    private static List<Bread> _instances = new List<Bread> {};
+    private static int total = 0;
     public int Cost { get; set; }
     public int Order { get; set; }
     public Bread(int order)
     {
-      _instances.Add(this);
       Order = order;
+      total = total + order;
     }
-    public static List<Bread> GetAll()
+    public static int GetAll()
     {
-      return _instances;
+      return total;
+    }
+    public static void ClearAll()
+    {
+      total = 0;
     }
     public int BreadOrder()
     {
@@ -29,6 +33,12 @@ namespace Item
       {
         return total;
       }
+    }
+    public int BreadOrder(int total)
+    {
+      int cost = total * 5;
+      int final = Math.Abs(((this.Order/2) * 5) - cost);
+      return final;
     }
   }
 }

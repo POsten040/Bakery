@@ -6,8 +6,12 @@ using System.Collections.Generic;
 namespace Items.Tests
 {
   [TestClass]
-  public class BreadTests
+  public class BreadTests : IDisposable
   {
+    public void Dispose()
+    {
+      Bread.ClearAll();
+    }
     [TestMethod]
     public void MakeBread_CreatesBreadObject_True()
     {
@@ -55,11 +59,19 @@ namespace Items.Tests
       Assert.AreEqual(7, result);
     }
     [TestMethod]
-    private List<Bread> GetAll_ReturnsAllListItems_True()
+    private void GetAll_ReturnsTotalBreadOrder_Int()
     {
-      Bread uOrder = new Bread(1);
-      List<Bread> u = Bread.GetAll();
-      Assert.AreEqual(typeof(List<Bread>), u.GetType());
+      Bread uOrder = new Bread(5);
+      int u = Bread.GetAll();
+      Assert.AreEqual(typeof(int), u);
+    }
+    [TestMethod]
+    public void BreadOrder_CalculateTotalCostOfBreadOrders_Int()
+    {
+      Bread uOrder = new Bread(5);
+      Bread yOrder = new Bread(2);
+      int total = Bread.GetAll();
+      Assert.AreEqual(5, total);
     }
   }
 }

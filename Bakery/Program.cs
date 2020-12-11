@@ -16,7 +16,22 @@ namespace Bakery
         int bread = int.Parse(Console.ReadLine());
         Bread uOrder = new Bread(bread);
         Console.WriteLine($"Your {uOrder.Order} Loaves of bread will cost ${uOrder.BreadOrder()}");
-        Console.WriteLine(Bread.GetAll());
+        Console.WriteLine("Would you like to add to your order, y/n?");
+        string x = Console.ReadLine();
+        if (x == "y")
+        {
+          Main();
+        }
+        else if (x == "n")
+        {
+          int finalOrder = Bread.GetAll();
+          Console.WriteLine($"You bought {finalOrder} Loaves!");
+          Console.WriteLine("Bye!");
+        }
+        else 
+        {
+          Console.WriteLine("Not a valid selection");
+        }
       }
       else if (input == "pastry")
       {
@@ -24,6 +39,10 @@ namespace Bakery
         int pastry = int.Parse(Console.ReadLine());
         Pastry uOrder = new Pastry(pastry);
         Console.WriteLine($"Your {uOrder.Order} Pastries will cost ${uOrder.PastryOrder()}");
+      }
+      else 
+      {
+        Console.WriteLine("Not a valid selection");
       }
     }
   }
