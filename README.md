@@ -1,10 +1,10 @@
-# Galactic Age Calculator
+# Bakery
 
-#### **This program calculates prices of food items at a bakery. Patrick Osten, 10/23/2020**
-
-**[Click here to open github repository in web browser](https://github.com/POsten040/week-5-project)**
+#### **This program calculates prices of food items at a bakery. Patrick Osten, <span style="text-decoration:underline">12/11/2020**
 
 ## Description
+
+![](./assets/recording.gif)
 
 This application will give the user a price for bread and pastries, calculating for sale prices. 
 
@@ -30,14 +30,6 @@ This application will give the user a price for bread and pastries, calculating 
 <details>
 <summary style = "color:lightgreen">Expand </summary>
 <br>
-
-Requirements:
- - two classes(bread/pastries)
- - welcome message, cost for both
- - order number of loaves
- - deals : Bread - buy 2 get one free, loaf = $5
-          Pastry buy 1 for $2 or 3 for $5
-
 
 ### Describe Bread
 <table>

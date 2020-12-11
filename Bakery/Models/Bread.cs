@@ -1,14 +1,21 @@
 using System;
+using System.Collections.Generic;
 
 namespace Item
 {
   public class Bread
   {
+    private static List<Bread> _instances = new List<Bread> {};
     public int Cost { get; set; }
     public int Order { get; set; }
     public Bread(int order)
     {
+      _instances.Add(this);
       Order = order;
+    }
+    public static List<Bread> GetAll()
+    {
+      return _instances;
     }
     public int BreadOrder()
     {

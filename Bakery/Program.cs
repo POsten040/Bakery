@@ -16,6 +16,7 @@ namespace Bakery
         int bread = int.Parse(Console.ReadLine());
         Bread uOrder = new Bread(bread);
         Console.WriteLine($"Your {uOrder.Order} Loaves of bread will cost ${uOrder.BreadOrder()}");
+        Console.WriteLine(Bread.GetAll());
       }
       else if (input == "pastry")
       {

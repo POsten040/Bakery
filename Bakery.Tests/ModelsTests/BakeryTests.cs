@@ -1,6 +1,7 @@
 using Item;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace Items.Tests
 {
@@ -48,10 +49,17 @@ namespace Items.Tests
     [TestMethod]
     public void PastryOrder_CalculateSalePriceOfPastry_Int()
     {
-      int input = 3;
+      int input = 4;
       Pastry uOrder = new Pastry(input);
       int result = uOrder.PastryOrder();
-      Assert.AreEqual(5, result);
+      Assert.AreEqual(7, result);
+    }
+    [TestMethod]
+    private List<Bread> GetAll_ReturnsAllListItems_True()
+    {
+      Bread uOrder = new Bread(1);
+      List<Bread> u = Bread.GetAll();
+      Assert.AreEqual(typeof(List<Bread>), u.GetType());
     }
   }
 }
