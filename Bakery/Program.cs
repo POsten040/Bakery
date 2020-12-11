@@ -25,7 +25,7 @@ namespace Bakery
         else if (x == "n")
         {
           int finalOrder = Bread.GetAll();
-          Console.WriteLine($"You bought {finalOrder} Loaves!");
+          Console.WriteLine($"You bought {finalOrder} Loaves for ${Bread.BreadOrder(finalOrder)}");
           Console.WriteLine("Bye!");
         }
         else 

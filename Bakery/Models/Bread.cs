@@ -34,10 +34,10 @@ namespace Item
         return total;
       }
     }
-    public int BreadOrder(int total)
+    public static int BreadOrder(int total)
     {
       int cost = total * 5;
-      int final = Math.Abs(((this.Order/2) * 5) - cost);
+      int final = Math.Abs(((total/2) * 5) - cost);
       return final;
     }
   }

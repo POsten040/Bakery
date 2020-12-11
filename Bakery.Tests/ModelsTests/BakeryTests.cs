@@ -11,6 +11,7 @@ namespace Items.Tests
     public void Dispose()
     {
       Bread.ClearAll();
+      Pastry.ClearAll();
     }
     [TestMethod]
     public void MakeBread_CreatesBreadObject_True()
@@ -75,13 +76,13 @@ namespace Items.Tests
       Assert.AreEqual(20, final);
     }
     [TestMethod]
-    public void PastryOrder_CalculateTotalCostOfPastryOrders_Int()
+    public void PastryOrder_CalculateTotalCostOfPastryOrders_Double()
     {
-      Pastry uOrder = new Pastry(5);
+      Pastry uOrder = new Pastry(9);
       Pastry yOrder = new Pastry(2);
-      int total = Pastry.GetAll();
-      int final = Pastry.PastryOrder(total);
-      Assert.AreEqual(20, final);
+      int num = Pastry.GetAll();
+      double final = Pastry.PastryOrder(num);
+      Assert.AreEqual(19, final);
     }
   }
 }
