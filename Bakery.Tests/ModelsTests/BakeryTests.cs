@@ -71,7 +71,8 @@ namespace Items.Tests
       Bread uOrder = new Bread(5);
       Bread yOrder = new Bread(2);
       int total = Bread.GetAll();
-      Assert.AreEqual(5, total);
+      int final = Bread.BreadOrder(total);
+      Assert.AreEqual(20, final);
     }
   }
 }
