@@ -5,7 +5,7 @@ namespace Item
   public class Pastry
   {
     public int Order { get; set; }
-    public Pastry(int order)
+    public Pastry()
     {
       Order = order;
     }
