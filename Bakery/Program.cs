@@ -12,28 +12,28 @@ namespace Bakery
       Console.WriteLine("Welcome to bakery, Would you like Bread or Pastry?(bread/pastry)");
       string input = Console.ReadLine();
       try
-        {
-        Regex rg = new Regex("[0-9]");
+      {
+        Regex rg = new Regex(@"[0-9]");
         bool matches = rg.IsMatch(input);
         // Console.WriteLine(Regex.Matches(input, rg));
-        if (matches == true)
+        if (matches == false)
         {
           Program.InputOrder(input);
           Console.WriteLine("Would you like to add to your order? (y/n)");
           string x = Console.ReadLine();
           Program.Menu(x);
         }
-        }
-        catch (Exception e)
+        else
         {
-          Console.WriteLine(e.Message);
+          Console.WriteLine("Please choose bread or pastries");
           Main();
         }
-      //   Console.WriteLine("Not a valid selection");
-      //   Main();
-      // }
-      // else
-      // {
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine(e.Message);
+        Main();
+      }
     }
     public static void PrintOrder()
     {
