@@ -18,20 +18,25 @@ This application will give the user a price for bread and pastries, calculating 
 - Code editor like [VsCode](https://**Code**.visualstudio.com/download) to view source **Code**.
 
 ## Setup
+<details>
+<summary style = "color:lightgreen">Expand </summary>
+<br>
 
 #### From the web
 1. Go to this [GitHub Repo Page](https://github.com/POsten040/Bakery).
 2. Click the "Code" and click the 'Download zip' option.
 3. Unzip the file, navigate to the **Bakery.Tests** directory and in the terminal run : `dotnet restore`
-4. After that is successful type : `dotnet run`
-5. To run the tests from the terminal type: `dotnet test`
+4. To run the tests from the terminal type: `dotnet test`
+5. After that is successful navigate to the **Bakery** directory and type in the terminal: `dotnet run`
+</details>
 
 ## Specs
+
 <details>
 <summary style = "color:lightgreen">Expand </summary>
 <br>
 
-### Describe Bread
+### Describe
 <table>
   <tr>
     <th>Test</th>
