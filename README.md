@@ -12,8 +12,6 @@ This application will give the user a price for bread and pastries, calculating 
 
 - Up to date internet browser ([Chrome](https://www.google.com/chrome/?brand=CHBD&gclid=Cj0KCQjw28T8BRDbARIsAEOMBcy9jwgkNels1LOSIWTx4sDazLfEgC6PylTug62KqyWPeA0EMyr3254aAjTTEALw_wcB&gclsrc=aw.ds), [Mozilla](https://www.mozilla.org/en-US/firefox/), [Opera](https://www.opera.com/)).
  
-- [Node.js](https://nodejs.org/en/download/)
- 
  -**optional**- 
 - Code editor like [VsCode](https://**Code**.visualstudio.com/download) to view source **Code**.
 
@@ -43,7 +41,7 @@ This application will give the user a price for bread and pastries, calculating 
     <th>Input</th>
     <th>Expect</th>
   <tr>
-    <td>Create Bread class that takes int as argument</td>
+    <td>Create Bread class that takes number as argument</td>
     <td>5</td>
     <td>Bread(5) = TypeOf(Bread)</td>
   <tr>
